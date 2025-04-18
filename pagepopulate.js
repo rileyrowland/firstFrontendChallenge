@@ -20,14 +20,23 @@ contentsections.forEach((section, index) => {
 	const contentBox = document.createElement("div");
 	contentBox.classList.add("contentbox");
 
+	const contentboxheader = document.createElement("div");
+	contentboxheader.classList.add("contentboxheader");
+
 	const image = document.createElement("img");
 	image.src = contentimages[index];
+	image.classList.add("contenticons");
+
+	const contentboxtext = document.createElement("div");
+	contentboxtext.classList.add("contentboxdescription");
 
 	const title = document.createElement("h2");
 	title.textContent = section;
+	title.classList.add("contentboxheadertext");
 
 	const description = document.createElement("p");
 	description.textContent = contentdescriptions[index];
+	description.classList.add("contentboxheadertext");
 
 	const contentboxbottomcontainer = document.createElement("div");
     contentboxbottomcontainer.classList.add("contentboxbottomcontainer");
@@ -51,9 +60,12 @@ contentsections.forEach((section, index) => {
 	label.appendChild(slider);
     //Toggle Switch End
 
-	contentBox.appendChild(image);
-	contentBox.appendChild(title);
-	contentBox.appendChild(description);
+	contentboxheader.appendChild(image);
+	contentboxtext.appendChild(title);
+	contentboxtext.appendChild(description);
+	contentboxheader.appendChild(contentboxtext);
+	contentBox.appendChild(contentboxheader);
+
 
     contentBox.appendChild(contentboxbottomcontainer);
 	contentboxbottomcontainer.appendChild(remove);
