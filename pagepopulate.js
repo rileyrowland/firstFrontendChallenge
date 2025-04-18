@@ -38,7 +38,7 @@ contentsections.forEach((section, index) => {
 
 	//Toggle Switch Start
 	const label = document.createElement("label");
-	label.classList.add("switch");
+	label.classList.add("ontoggleswitch");
 
 	const input = document.createElement("input");
 	input.type = "checkbox";

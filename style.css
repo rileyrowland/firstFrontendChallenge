@@ -13,6 +13,17 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
+.logosection {
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -22,9 +33,14 @@ header {
     padding: 1rem;
 }
 
+h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
 .filterbuttons {
     list-style-type: none;
-
+    
     display: flex;
     gap: 10px;
 }
@@ -56,7 +72,7 @@ header {
 
 }
 
-.switch {
+.ontoggleswitch {
 
 }
 
