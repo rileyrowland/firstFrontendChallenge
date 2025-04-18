@@ -29,12 +29,35 @@ contentsections.forEach((section, index) => {
 	const description = document.createElement("p");
 	description.textContent = contentdescriptions[index];
 
+	const contentboxbottomcontainer = document.createElement("div");
+    contentboxbottomcontainer.classList.add("contentboxbottomcontainer");
+
 	const remove = document.createElement("div");
 	remove.textContent = "Remove";
+    remove.classList.add("remove");
+
+	//Toggle Switch Start
+	const label = document.createElement("label");
+	label.classList.add("switch");
+
+	const input = document.createElement("input");
+	input.type = "checkbox";
+	//input.id = id;
+
+	const slider = document.createElement("span");
+	slider.classList.add("slider");
+
+	label.appendChild(input);
+	label.appendChild(slider);
+    //Toggle Switch End
 
 	contentBox.appendChild(image);
 	contentBox.appendChild(title);
 	contentBox.appendChild(description);
-	contentBox.appendChild(remove);
+
+    contentBox.appendChild(contentboxbottomcontainer);
+	contentboxbottomcontainer.appendChild(remove);
+	contentboxbottomcontainer.appendChild(label);
+
 	container.appendChild(contentBox);
 });

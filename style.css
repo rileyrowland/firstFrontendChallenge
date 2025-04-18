@@ -42,3 +42,40 @@ header {
     background-color: #fff;
     border: 1px solid #000;
 }
+
+.contentboxbottomcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.remove {
+
+}
+
+.switch {
+
+}
+
+.switch input {
+}
+
+.slider {
+    
+}
+
+.slider:before {
+    
+}
+
+input:checked + .slider {
+    
+}
+
+input:checked + .slider:before {
+    
+}
+
