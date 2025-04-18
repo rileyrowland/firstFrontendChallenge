@@ -5,10 +5,9 @@ body {
     margin-top: 2rem;
 }
 
-.logosection {
+header {
     background-color: hsl(225, 23%, 24%);
     border-radius: 15px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +16,8 @@ body {
     padding: 1rem;
 }
 
-header {
+/*#region*/
+.titleSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,85 +27,76 @@ header {
     margin-top: 1rem;
 }
 
-h1 {
+.titleSection h1 {
     font-size: 2rem;
     color: #fff;
 }
 
-.filterbuttons {
+.titleSection ul {
     list-style-type: none;
     
     display: flex;
     gap: 10px;
 }
+/*#endregion*/
 
-.container {
+/*#region*/
+.content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 16px;
+    max-height: 100%;
+    overflow: hidden;
 }
-.contentbox {
+
+.contentBox {
     flex: 1 1 300px;
+    display: flex;
     min-width: 250px;
     max-width: 100%;
+    height: calc(25vh - 20px);
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-.contentboxheader {
+.contentBox .header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
-.contentheader img {
+.contentBox .header img {
     width: 80px;
     height: auto;
     flex-shrink: 0;
 }
 
-contentboxheadertext {
+.contentBox .header .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.contentboxbottomcontainer {
+.contentBox h2 {
+    margin: 0;
+}
+
+.contentBox p {
+
+}
+
+.contentBox .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
-}
-
-
-.remove {
-}
-
-.ontoggleswitch {
-
-}
-
-.switch input {
-}
-
-.slider {
-    
-}
-
-.slider:before {
-    
-}
-
-input:checked + .slider {
-    
-}
-
-input:checked + .slider:before {
-    
-}
+    }
+/*#endregion*/
 

@@ -14,62 +14,63 @@ const contentimages = ["assets/images/logo-devlens.svg", "assets/images/logo-sty
 	"assets/images/logo-tab-master-pro.svg", "assets/images/logo-viewport-buddy.svg", "assets/images/logo-markup-notes.svg", "assets/images/logo-grid-guides.svg",
 	"assets/images/logo-palette-picker.svg", "assets/images/logo-link-checker.svg", "assets/images/logo-dom-snapshot.svg", "assets/images/logo-console-plus.svg"];
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".content");
 
 contentsections.forEach((section, index) => {
+	//Declare Content Box
 	const contentBox = document.createElement("div");
-	contentBox.classList.add("contentbox");
+	contentBox.classList.add("contentBox");
 
-	const contentboxheader = document.createElement("div");
-	contentboxheader.classList.add("contentboxheader");
 
+	//Declare Header & Footer
+	const header = document.createElement("div");
+	header.classList.add("header");
+
+	const footer = document.createElement("div");
+	footer.classList.add("footer");
+
+
+	//Declare Header Elements
 	const image = document.createElement("img");
 	image.src = contentimages[index];
-	image.classList.add("contenticons");
 
-	const contentboxtext = document.createElement("div");
-	contentboxtext.classList.add("contentboxdescription");
+	const text = document.createElement("div");
+	text.classList.add("text"); //Header Text Parent Group
 
 	const title = document.createElement("h2");
 	title.textContent = section;
-	title.classList.add("contentboxheadertext");
 
 	const description = document.createElement("p");
 	description.textContent = contentdescriptions[index];
-	description.classList.add("contentboxheadertext");
 
-	const contentboxbottomcontainer = document.createElement("div");
-    contentboxbottomcontainer.classList.add("contentboxbottomcontainer");
 
-	const remove = document.createElement("div");
-	remove.textContent = "Remove";
-    remove.classList.add("remove");
+	//Declare Footer Elements
+	const removeButton = document.createElement("div");
+	removeButton.textContent = "Remove";
 
-	//Toggle Switch Start
 	const label = document.createElement("label");
-	label.classList.add("ontoggleswitch");
-
 	const input = document.createElement("input");
 	input.type = "checkbox";
-	//input.id = id;
 
 	const slider = document.createElement("span");
-	slider.classList.add("slider");
 
 	label.appendChild(input);
 	label.appendChild(slider);
-    //Toggle Switch End
 
-	contentboxheader.appendChild(image);
-	contentboxtext.appendChild(title);
-	contentboxtext.appendChild(description);
-	contentboxheader.appendChild(contentboxtext);
-	contentBox.appendChild(contentboxheader);
+	//Append Header Elements
+	header.appendChild(image);
+	text.appendChild(title);
+	text.appendChild(description);
 
+	//Append Parent Groups
+	header.appendChild(text);
+	contentBox.appendChild(header);
 
-    contentBox.appendChild(contentboxbottomcontainer);
-	contentboxbottomcontainer.appendChild(remove);
-	contentboxbottomcontainer.appendChild(label);
+    //Append Footer Elements
+    contentBox.appendChild(footer);
+	footer.appendChild(removeButton);
+	footer.appendChild(label);
 
+	//Appemnd Full Content Box
 	container.appendChild(contentBox);
 });

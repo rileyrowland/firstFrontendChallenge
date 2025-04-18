@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\riley\\GitHub repos\\firstFrontendChallenge\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-18T04:16:34.552Z"
+              "WhenOpened": "2025-04-18T04:16:34.552Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,7 +45,7 @@
               "RelativeDocumentMoniker": "style.css",
               "ToolTip": "C:\\Users\\riley\\GitHub repos\\firstFrontendChallenge\\style.css",
               "RelativeToolTip": "style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-18T04:16:36.827Z",
               "EditorCaption": ""
@@ -57,7 +58,7 @@
               "RelativeDocumentMoniker": "pagepopulate.js",
               "ToolTip": "C:\\Users\\riley\\GitHub repos\\firstFrontendChallenge\\pagepopulate.js",
               "RelativeToolTip": "pagepopulate.js",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-18T13:46:16.49Z",
               "EditorCaption": ""
