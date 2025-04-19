@@ -10,14 +10,16 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 7vh;
-    min-height: 65px;
-    max-height: 7vh;
+    height: 65px;
 }
 
-header img {
-    margin-left: 1%;
-}
+    header img {
+        margin-left: 1%;
+    }
+
+    header label {
+        padding: 0 1%;
+    }
 
 /*#region*/
 .titleSection {
@@ -27,15 +29,15 @@ header img {
     align-items: center;
 }
 
-.titleSection h1 {
-    color: #fff;
-}
+    .titleSection h1 {
+        color: #fff;
+    }
 
-.titleSection ul {
-    display: flex;
-
-    list-style-type: none;
-}
+    .titleSection ul {
+        display: flex;
+        list-style-type: none;
+        gap: 8px;
+    }
 /*#endregion*/
 
 /*#region*/
@@ -45,44 +47,54 @@ header img {
 }
 
 .contentBox {
-    display: flex;
-    flex: 1 1 300px;
-
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 15px;
-
+    display: flex;
+    flex: 1 1 300px;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-.contentBox .header {
-    display: flex;
-    align-items: flex-start;
-}
+    .contentBox .header {
+        display: flex;
+        align-items: flex-start;
+    }
 
-.contentBox .header img {
-    flex-shrink: 0;
-}
+        .contentBox .header img {
+            width: 65px;
+            height: 65px;
+            padding: 0.5em;
+        }
 
-.contentBox .header .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        .contentBox .header .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.contentBox h2 {
-    
-}
+            .contentBox .header .text h2 {
+                margin-top: 0.5em;
+                margin-bottom: 0;
+                font-size: 1.5em;
+            }
 
-.contentBox p {
-    
-}
+            .contentBox .header .text p {
+                margin-top: 0.2em;
+                font-size: 1em;
+                color: #666;
+            }
 
-.contentBox .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    .contentBox h2 {
+    }
+
+    .contentBox p {
+    }
+
+    .contentBox .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 /*#endregion*/
 
