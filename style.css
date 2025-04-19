@@ -1,42 +1,40 @@
 body {
     background: linear-gradient(180deg, #040918 0%, #091540 100%);
-    height: 100vh;
-    margin: clamp(1rem, 5vw, 1in);
-    margin-top: 2rem;
+    margin: 2%;
 }
 
 header {
     background-color: hsl(225, 23%, 24%);
     border-radius: 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
+    height: 7vh;
+    min-height: 65px;
+    max-height: 7vh;
+}
+
+header img {
+    margin-left: 1%;
 }
 
 /*#region*/
 .titleSection {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    margin-top: 1rem;
 }
 
 .titleSection h1 {
-    font-size: 2rem;
     color: #fff;
 }
 
 .titleSection ul {
-    list-style-type: none;
-    
     display: flex;
-    gap: 10px;
+
+    list-style-type: none;
 }
 /*#endregion*/
 
@@ -44,21 +42,16 @@ header {
 .content {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    max-height: 100%;
-    overflow: hidden;
 }
 
 .contentBox {
-    flex: 1 1 300px;
     display: flex;
-    min-width: 250px;
-    max-width: 100%;
-    height: calc(25vh - 20px);
+    flex: 1 1 300px;
+
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 15px;
-    overflow: hidden;
+
     flex-direction: column;
     box-sizing: border-box;
 }
@@ -66,13 +59,9 @@ header {
 .contentBox .header {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    padding: 0.5rem;
 }
 
 .contentBox .header img {
-    width: 80px;
-    height: auto;
     flex-shrink: 0;
 }
 
@@ -83,20 +72,17 @@ header {
 }
 
 .contentBox h2 {
-    margin: 0;
+    
 }
 
 .contentBox p {
-
+    
 }
 
 .contentBox .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    }
+    justify-content: space-between;
+}
 /*#endregion*/
 
