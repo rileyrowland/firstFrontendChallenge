@@ -49,11 +49,21 @@ contentsections.forEach((section, index) => {
     removeButton.classList.add("text");
     removeButton.textContent = "Remove";
 
+    removeButton.addEventListener("click", () => {
+        contentBox.remove();
+    });
+
     const label = document.createElement("label");
     const input = document.createElement("input");
     input.type = "checkbox";
 
+    input.addEventListener("change", () => {
+        const isActive = input.checked;
+        console.log(`${section} is now ${isActive ? "active" : "inactive"}`);
+    });
+
     const slider = document.createElement("span");
+
 
     label.appendChild(input);
     label.appendChild(slider);
