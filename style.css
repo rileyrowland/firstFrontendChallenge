@@ -6,6 +6,8 @@ body {
     margin: 0;
 }
 
+/*Header*/
+/*#region*/
 .text {
     font-family: "Noto Sans HK";
 }
@@ -33,7 +35,9 @@ header {
     header label {
         padding: 0 1%;
     }
+/*#endregion*/
 
+/*Title Section*/
 /*#region*/
 .titleSection {
     display: flex;
@@ -57,6 +61,7 @@ header {
     }
 /*#endregion*/
 
+/*Content Boxes*/
 /*#region*/
 .content {
     display: flex;
@@ -126,6 +131,7 @@ header {
         }
 /*#endregion*/
 
+/*Filter Buttons*/
 /*#region*/
 .titleSection ul button {
     background-color: hsl(226, 25%, 17%);
@@ -155,4 +161,34 @@ header {
         color: white;
         border: 1px solid hsl(0, 78%, 42%);
     }
+/*#endregion*/
+
+/*Light and Dark Mode Btton*/
+/*#region*/
+/* Style the theme toggle button */
+header .theme-toggle {
+    background-color: hsl(226, 25%, 17%);
+    border: 1px solid hsl(225, 23%, 24%);
+    border-radius: 50%; /* Circular button */
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding: 0;
+}
+
+header .theme-toggle img {
+    width: 20px; /* Icon size */
+    height: 20px;
+}
+
+/* Hover effect */
+header .theme-toggle:hover {
+    background-color: hsl(0, 78%, 62%);
+    border-color: hsl(0, 78%, 52%);
+}
+
 /*#endregion*/

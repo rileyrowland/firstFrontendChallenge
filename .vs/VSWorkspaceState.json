@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets"
+    "\\assets",
+    "\\assets\\images"
   ],
-  "SelectedNode": "\\filterbuttonmanager.js",
+  "SelectedNode": "\\modebuttonmanager.js",
   "PreviewInSolutionExplorer": false
 }
