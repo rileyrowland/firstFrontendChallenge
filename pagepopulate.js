@@ -46,6 +46,7 @@ contentsections.forEach((section, index) => {
 
     //Declare Footer Elements
     const removeButton = document.createElement("div");
+    removeButton.classList.add("text");
     removeButton.textContent = "Remove";
 
     const label = document.createElement("label");
