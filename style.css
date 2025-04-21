@@ -1,11 +1,19 @@
 body {
     background: linear-gradient(180deg, #040918 0%, #091540 100%);
-    margin: 2%;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.spacer {
+    height: 4%;
 }
 
 header {
     background-color: hsl(225, 23%, 24%);
     border-radius: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -27,6 +35,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
 }
 
     .titleSection h1 {
@@ -44,6 +55,9 @@ header {
 .content {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right: 2%;
+    gap: 16px;
 }
 
 .contentBox {
@@ -54,6 +68,7 @@ header {
     flex: 1 1 300px;
     flex-direction: column;
     box-sizing: border-box;
+    padding: 1em;
 }
 
     .contentBox .header {
@@ -64,37 +79,31 @@ header {
         .contentBox .header img {
             width: 65px;
             height: 65px;
-            padding: 0.5em;
         }
 
         .contentBox .header .text {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 0.75em;
         }
 
             .contentBox .header .text h2 {
-                margin-top: 0.5em;
-                margin-bottom: 0;
                 font-size: 1.5em;
+                margin: 0;
             }
 
             .contentBox .header .text p {
-                margin-top: 0.2em;
                 font-size: 1em;
                 color: #666;
+                margin: 0;
             }
-
-    .contentBox h2 {
-    }
-
-    .contentBox p {
-    }
 
     .contentBox .footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-top: 2em;
     }
 /*#endregion*/
 
