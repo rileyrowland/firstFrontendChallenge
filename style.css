@@ -126,3 +126,33 @@ header {
         }
 /*#endregion*/
 
+/*#region*/
+.titleSection ul button {
+    background-color: hsl(226, 25%, 17%);
+    border: 1px solid hsl(225, 23%, 24%);
+    border-radius: 20px;
+    color: white;
+    font-family: "Noto Sans HK", sans-serif;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    /* Hover state */
+    .titleSection ul button:hover {
+        background-color: hsl(0, 78%, 62%);
+        color: white;
+    }
+
+    .titleSection ul button.active {
+        background-color: hsl(0, 78%, 52%);
+        color: white;
+        border: 1px solid hsl(0, 78%, 42%);
+    }
+
+    .titleSection ul button.active {
+        background-color: hsl(0, 78%, 52%);
+        color: white;
+        border: 1px solid hsl(0, 78%, 42%);
+    }
+/*#endregion*/

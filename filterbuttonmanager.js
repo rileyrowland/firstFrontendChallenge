@@ -22,4 +22,18 @@ filterButtons.forEach((button) => {
             }
         });
     });
+
+        // Select all filter buttons
+        const filterButtons = document.querySelectorAll(".titleSection ul button");
+
+        // Add event listeners to each button
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                // Remove "active" class from all buttons
+                filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+                // Add "active" class to the clicked button
+                button.classList.add("active");
+            });
+        });
 });
