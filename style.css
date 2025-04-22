@@ -6,8 +6,7 @@ body {
     margin: 0;
 }
 
-/*Header*/
-/*#region*/
+/*#region Header*/
 .text {
     font-family: "Noto Sans HK";
 }
@@ -37,8 +36,7 @@ header {
     }
 /*#endregion*/
 
-/*Title Section*/
-/*#region*/
+/*#region Title Section*/
 .titleSection {
     display: flex;
     flex-wrap: wrap;
@@ -61,8 +59,7 @@ header {
     }
 /*#endregion*/
 
-/*Content Boxes*/
-/*#region*/
+/*#region Content Boxes*/
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +84,7 @@ header {
     .contentBox .header {
         display: flex;
         align-items: flex-start;
-        margin-bottom: 5em;
+        margin-bottom: 4em;
     }
 
         .contentBox .header img {
@@ -131,8 +128,7 @@ header {
         }
 /*#endregion*/
 
-/*Filter Buttons*/
-/*#region*/
+/*#region Filter Buttons*/
 .titleSection ul button {
     background-color: hsl(226, 25%, 17%);
     border: 1px solid hsl(225, 23%, 24%);
@@ -144,33 +140,24 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-    /* Hover state */
     .titleSection ul button:hover {
-        background-color: hsl(0, 78%, 62%);
-        color: white;
+        background-color: hsl(3, 86%, 64%);
+        color: hsl(3, 71%, 56%);
     }
 
     .titleSection ul button.active {
-        background-color: hsl(0, 78%, 52%);
+        background-color: hsl(3, 71%, 56%);
         color: white;
-        border: 1px solid hsl(0, 78%, 42%);
-    }
-
-    .titleSection ul button.active {
-        background-color: hsl(0, 78%, 52%);
-        color: white;
-        border: 1px solid hsl(0, 78%, 42%);
+        border-color: hsl(3, 77%, 44%);
     }
 /*#endregion*/
 
-/*Light and Dark Mode Btton*/
-/*#region*/
-/* Style the theme toggle button */
+/*#region Light and Dark Mode Btton*/
 header .theme-toggle {
-    background-color: hsl(226, 25%, 17%);
+    background-color: hsl(225, 23%, 24%);
     border: 1px solid hsl(225, 23%, 24%);
-    border-radius: 50%; /* Circular button */
-    width: 40px; /* Adjust size as needed */
+    border-radius: 10px;
+    width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -178,17 +165,45 @@ header .theme-toggle {
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     padding: 0;
+    margin-right: 1em;
 }
 
 header .theme-toggle img {
-    width: 20px; /* Icon size */
+    width: 20px;
     height: 20px;
 }
 
-/* Hover effect */
-header .theme-toggle:hover {
-    background-color: hsl(0, 78%, 62%);
-    border-color: hsl(0, 78%, 52%);
+    header .theme-toggle:hover {
+        background-color: hsl(3, 86%, 64%);
+        border-color: hsl(3, 71%, 56%);
+    }
+
+    header .theme-toggle.active {
+        background-color: hsl(3, 71%, 56%);
+        border-color: hsl(3, 77%, 44%);
+    }
+/*#endregion*/
+
+/*#region Remove Button*/
+.footer button {
+    background-color: hsl(225, 23%, 24%);
+    border: 1px solid hsl(226, 11%, 37%);
+    border-radius: 20px;
+    color: white;
+    font-family: "Noto Sans HK", sans-serif;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: border 0.3s ease, color 0.3s ease;
 }
 
+    .footer button:hover {
+        background-color: hsl(3, 86%, 64%);
+        border-color: hsl(3, 71%, 56%);
+    }
+
+    .footer button:active {
+        background-color: hsl(3, 71%, 56%);
+        border-color: hsl(3, 77%, 44%);
+    }
 /*#endregion*/

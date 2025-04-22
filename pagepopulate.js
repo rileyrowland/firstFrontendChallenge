@@ -17,34 +17,35 @@ const contentimages = ["assets/images/logo-devlens.svg", "assets/images/logo-sty
 const container = document.querySelector(".content");
 
 contentsections.forEach((section, index) => {
-    //Declare Content Box
+    //#region Declarations
+    //#region Declare Content Box
     const contentBox = document.createElement("div");
     contentBox.classList.add("contentBox");
+    //#endregion
 
-
-    //Declare Header & Footer
+    //#region Declare Header & Footer
     const header = document.createElement("div");
     header.classList.add("header");
 
     const footer = document.createElement("div");
     footer.classList.add("footer");
+    //#endregion
 
-
-    //Declare Header Elements
+    //#region Declare Header Elements
     const image = document.createElement("img");
     image.src = contentimages[index];
 
     const text = document.createElement("div");
-    text.classList.add("text"); //Header Text Parent Group
+    text.classList.add("text");
 
     const title = document.createElement("h2");
     title.textContent = section;
 
     const description = document.createElement("p");
     description.textContent = contentdescriptions[index];
+    //#endregion
 
-
-    //Declare Footer Elements
+    //#region Declare Footer Elements
     const removeButton = document.createElement("button");
     removeButton.classList.add("text");
     removeButton.textContent = "Remove";
@@ -67,21 +68,29 @@ contentsections.forEach((section, index) => {
 
     label.appendChild(input);
     label.appendChild(slider);
+    //#endregion
+    //#endregion
 
-    //Append Header Elements
+    //#region Initialization
+    //#region Append Header Elements
     header.appendChild(image);
     text.appendChild(title);
     text.appendChild(description);
+    //#endregion
 
-    //Append Parent Groups
+    //#region Append Parent Groups
     header.appendChild(text);
     contentBox.appendChild(header);
+    //#endregion
 
-    //Append Footer Elements
+    //#region Append Footer Elements
     contentBox.appendChild(footer);
     footer.appendChild(removeButton);
     footer.appendChild(label);
+    //#endregion
 
-    //Appemnd Full Content Box
+    //#region Appemnd Full Content Box
     container.appendChild(contentBox);
+    //#endregion
+    //#endregion
 });

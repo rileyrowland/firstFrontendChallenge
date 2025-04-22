@@ -18,21 +18,17 @@ filterButtons.forEach((button) => {
             } else if (filterType === "inactive" && !isActive) {
                 box.style.display = "flex"; // Show inactive
             } else {
-                box.style.display = "none"; // Hide others
+                box.style.display = "none";
             }
         });
     });
 
-        // Select all filter buttons
         const filterButtons = document.querySelectorAll(".titleSection ul button");
 
-        // Add event listeners to each button
         filterButtons.forEach((button) => {
             button.addEventListener("click", () => {
-                // Remove "active" class from all buttons
                 filterButtons.forEach((btn) => btn.classList.remove("active"));
 
-                // Add "active" class to the clicked button
                 button.classList.add("active");
             });
         });
