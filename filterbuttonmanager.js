@@ -1,35 +1,35 @@
-const filterButtons = document.querySelectorAll(".titleSection ul button");
+let currentFilter = "all";
 
+const filterButtons = document.querySelectorAll(".titleSection ul button");
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
 
         button.classList.add("active");
 
-        const filterType = button.textContent.toLowerCase();
+        currentFilter = button.textContent.toLowerCase();
 
-        const contentBoxes = document.querySelectorAll(".contentBox");
-        contentBoxes.forEach((box) => {
-            const isActive = box.querySelector("input[type='checkbox']").checked;
+        applyFilter();
+    });
+});
 
-            if (filterType === "all") {
-                box.style.display = "flex"; // Show all
-            } else if (filterType === "active" && isActive) {
-                box.style.display = "flex"; // Show active
-            } else if (filterType === "inactive" && !isActive) {
-                box.style.display = "flex"; // Show inactive
-            } else {
-                box.style.display = "none";
-            }
+function applyFilter() {
+    document.querySelectorAll(".contentBox").forEach((div) => {
+        const input = div.querySelector("input[type='checkbox']");
+        const isActive = input.checked;
+
+        if (currentFilter == "all") {
+            div.style.display = "flex"; // Show all boxes
+        } else if (currentFilter == "active" && isActive) {
+            div.style.display = "flex"; // Show only active boxes
+        } else if (currentFilter == "inactive" && !isActive) {
+            div.style.display = "flex"; // Show only inactive boxes
+        } else {
+            div.style.display = "none"; // Hide boxes that don't match the filter
+        }
+
+        div.addEventListener("change", () => {
+            applyFilter();
         });
     });
-
-        const filterButtons = document.querySelectorAll(".titleSection ul button");
-
-        filterButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                filterButtons.forEach((btn) => btn.classList.remove("active"));
-
-                button.classList.add("active");
-            });
-        });
-});
+}

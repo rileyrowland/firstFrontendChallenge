@@ -89,7 +89,7 @@ contentsections.forEach((section, index) => {
     footer.appendChild(label);
     //#endregion
 
-    //#region Appemnd Full Content Box
+    //#region Append Full Content Box
     container.appendChild(contentBox);
     //#endregion
     //#endregion
