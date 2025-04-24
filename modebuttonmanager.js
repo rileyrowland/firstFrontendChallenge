@@ -1,16 +1,30 @@
 const themeToggleButton = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
-themeToggleButton.addEventListener("click", () => {
-    // Toggle the active class on the button
-    themeToggleButton.classList.toggle("active");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    document.body.classList.toggle("dark-mode", savedTheme === "dark");
+    themeIcon.setAttribute(
+        "src",
+        savedTheme === "dark" ? "assets/images/icon-sun.svg" : "assets/images/icon-moon.svg"
+    );
+    themeIcon.setAttribute(
+        "alt",
+        savedTheme === "dark" ? "Sun Icon" : "Moon Icon"
+    );
+}
 
-    // Update the icon based on the current state
-    if (themeIcon.getAttribute("src") === "assets/images/icon-sun.svg") {
-        themeIcon.setAttribute("src", "assets/images/icon-moon.svg");
-        themeIcon.setAttribute("alt", "Moon Icon");
-    } else {
-        themeIcon.setAttribute("src", "assets/images/icon-sun.svg");
-        themeIcon.setAttribute("alt", "Sun Icon");
-    }
+themeToggleButton.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.toggle("dark-mode");
+
+    themeIcon.setAttribute(
+        "src",
+        isDarkMode ? "assets/images/icon-sun.svg" : "assets/images/icon-moon.svg"
+    );
+    themeIcon.setAttribute(
+        "alt",
+        isDarkMode ? "Sun Icon" : "Moon Icon"
+    );
+
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 });

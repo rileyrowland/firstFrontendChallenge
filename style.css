@@ -1,27 +1,48 @@
 :root {
+    /*#region General*/
     --body-color: hsl(0, 0%, 93%);
     --content-color: hsl(200, 60%, 99%);
     --border-color: hsl(0, 0%, 78%);
     --text-color: hsl(227, 75%, 14%);
+    /*#endregion*/
+    /*#region Activated/Pressed*/
     --activated-color: hsl(3, 71%, 56%);
     --activated-hover-color: hsl(3, 77%, 44%);
+    /*#endregion*/
+    /*#region Hovered*/
     --hovered-color: white;
     --hovered-border-color: hsl(3, 71%, 56%);
-    --slider-unactivated-color: hsl(0, 0%, 93%);
+    /*#endregion*/
+    /*#region Color Mode Button*/
     --colormodebutton-color: hsl(0, 0%, 93%);
     --colormodebutton-border-color: hsl(0, 0%, 93%);
+
     --colormodebutton-hover-color: hsl(0, 0%, 93%);
     --colormodebutton-hover-border-color: hsl(3, 86%, 64%);
+
     --colormodebutton-pressed-color: hsl(226, 11%, 37%);
     --colormodebutton-pressed-border-color: hsl(0, 0%, 93%);
+    /*#endregion*/
+
+    --slider-unactivated-color: hsl(0, 0%, 93%);
 }
 
-/*.dark-mode {
+.dark-mode {
     --body-color: linear-gradient(180deg, #040918 0%, #091540 100%);
     --content-color: hsl(226, 25%, 17%);
     --text-color: white;
-    --border-color :hsl(225, 23%, 24%);
-}*/
+    --border-color: hsl(225, 23%, 24%);
+    --hovered-color: hsl(225, 23%, 24%);
+    --hovered-border-color: hsl(3, 77%, 40%);
+    --colormodebutton-color: hsl(225, 23%, 24%);
+    --colormodebutton-border-color: hsl(225, 23%, 24%);
+    --colormodebutton-hover-color: hsl(225, 23%, 24%);
+    --colormodebutton-hover-border-color: hsl(3, 77%, 40%);
+    --colormodebutton-pressed-color: hsl(3, 71%, 56%);
+    --colormodebutton-pressed-border-color: hsl(3, 77%, 44%);
+    --slider-unactivated-color: hsl(226, 11%, 37%);
+}
+
 
 body {
     background: var(--body-color);
@@ -29,6 +50,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 5s ease, color 1s ease;
 }
 
 /*#region Header*/
