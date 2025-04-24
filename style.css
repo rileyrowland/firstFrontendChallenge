@@ -1,21 +1,30 @@
 :root {
-    --background-color: hsl(0, 0%, 93%);
+    --body-color: hsl(0, 0%, 93%);
     --content-color: hsl(200, 60%, 99%);
-    --border-color: hsl(0, 0%, 93%);
+    --border-color: hsl(0, 0%, 78%);
     --text-color: hsl(227, 75%, 14%);
-    --highlight-color: hsl(3, 71%, 56%);
-    --selected-color: hsl(3, 77%, 44%);
+    --activated-color: hsl(3, 71%, 56%);
+    --activated-hover-color: hsl(3, 77%, 44%);
+    --hovered-color: white;
+    --hovered-border-color: hsl(3, 71%, 56%);
+    --slider-unactivated-color: hsl(0, 0%, 93%);
+    --colormodebutton-color: hsl(0, 0%, 93%);
+    --colormodebutton-border-color: hsl(0, 0%, 93%);
+    --colormodebutton-hover-color: hsl(0, 0%, 93%);
+    --colormodebutton-hover-border-color: hsl(3, 86%, 64%);
+    --colormodebutton-pressed-color: hsl(226, 11%, 37%);
+    --colormodebutton-pressed-border-color: hsl(0, 0%, 93%);
 }
 
-.dark-mode {
-    --background-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+/*.dark-mode {
+    --body-color: linear-gradient(180deg, #040918 0%, #091540 100%);
     --content-color: hsl(226, 25%, 17%);
     --text-color: white;
     --border-color :hsl(225, 23%, 24%);
-}
+}*/
 
 body {
-    background: var(--background-color);
+    background: var(--body-color);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -40,6 +49,8 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid var(--border-color);
+    border-width: 0.5px;
     height: 75px;
 }
 
@@ -88,7 +99,7 @@ header {
     background-color: var(--content-color);
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    border-width: 2px;
+    border-width: 0.5px;
     display: flex;
     flex: 1 1 300px;
     flex-direction: column;
@@ -158,22 +169,21 @@ header {
 }
 
     .titleSection ul button:hover {
-        background-color: var(--highlight-color);
-        border-color: hsl(3, 71%, 56%);
-        color:white;
+        background-color: var(--hovered-color);
+        border-color: var(--hovered-border-color);
     }
 
     .titleSection ul button.active {
-        background-color: var(--selected-color);
+        background-color: var(--activated-color);
+        border-color: var(--activated-hover-color);
         color: white;
-        border-color: hsl(3, 77%, 44%);
     }
 /*#endregion*/
 
 /*#region Light and Dark Mode Btton*/
 header .theme-toggle {
-    background-color: var(--content-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--colormodebutton-color);
+    border: 1px solid var(--colormodebutton-border-color);
     border-radius: 10px;
     width: 40px;
     height: 40px;
@@ -192,13 +202,13 @@ header .theme-toggle img {
 }
 
     header .theme-toggle:hover {
-        background-color: var(--highlight-color);
-        border-color: hsl(3, 71%, 56%);
+        background-color: var(--colormodebutton-hover-color);
+        border-color: var(--colormodebutton-hover-border-color);
     }
 
     header .theme-toggle.active {
-        background-color: hsl(3, 71%, 56%);
-        border-color: hsl(3, 77%, 44%);
+        background-color: var(--colormodebutton-pressed-color);
+        border-color: var(--colormodebutton-pressed-border-color);
     }
 /*#endregion*/
 
@@ -221,8 +231,8 @@ header .theme-toggle img {
     }
 
     .footer button:active {
-        background-color: var(--background-color);
-        border-color: var(--selected-color);
+        background-color: var(--activated-color);
+        border-color: var(--activated-hover-color);
     }
 /*#endregion*/
 
@@ -249,7 +259,7 @@ header .theme-toggle img {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--background-color);
+        background-color: var(--slider-unactivated-color);
         border-radius: 25px;
         transition: background-color 0.3s ease;
     }
@@ -269,7 +279,7 @@ header .theme-toggle img {
 
     
     .footer label input:checked + span {
-        background-color: var(--selected-color);
+        background-color: var(--activated-color);
     }
 
         .footer label input:checked + span::before {
