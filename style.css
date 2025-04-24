@@ -1,5 +1,21 @@
+:root {
+    --background-color: hsl(0, 0%, 93%);
+    --content-color: hsl(200, 60%, 99%);
+    --border-color: hsl(0, 0%, 93%);
+    --text-color: hsl(227, 75%, 14%);
+    --highlight-color: hsl(3, 71%, 56%);
+    --selected-color: hsl(3, 77%, 44%);
+}
+
+.dark-mode {
+    --background-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --content-color: hsl(226, 25%, 17%);
+    --text-color: white;
+    --border-color :hsl(225, 23%, 24%);
+}
+
 body {
-    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    background: var(--background-color);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -16,7 +32,7 @@ body {
 }
 
 header {
-    background-color: hsl(226, 25%, 17%);
+    background-color: var(--content-color);
     border-radius: 20px;
     margin-left: 10%;
     margin-right: 10%;
@@ -48,7 +64,7 @@ header {
 }
 
     .titleSection h1 {
-        color: #fff;
+        color: var(--text-color);
         font-size: 2em;
     }
 
@@ -69,8 +85,8 @@ header {
 }
 
 .contentBox {
-    background-color: hsl(226, 25%, 17%);
-    border: 1px solid hsl(225, 23%, 24%);
+    background-color: var(--content-color);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     border-width: 2px;
     display: flex;
@@ -100,7 +116,7 @@ header {
         }
 
             .contentBox .header .text h2 {
-                color: #fff;
+                color: var(--text-color);
                 font-size: 1.5em;
                 margin: 0;
                 font-size: 1.2em;
@@ -130,10 +146,10 @@ header {
 
 /*#region Filter Buttons*/
 .titleSection ul button {
-    background-color: hsl(226, 25%, 17%);
-    border: 1px solid hsl(225, 23%, 24%);
+    background-color: var(--content-color);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    color: white;
+    color: var(--text-color);
     font-family: "Noto Sans HK", sans-serif;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -142,13 +158,13 @@ header {
 }
 
     .titleSection ul button:hover {
-        background-color: hsl(3, 86%, 64%);
+        background-color: var(--highlight-color);
         border-color: hsl(3, 71%, 56%);
         color:white;
     }
 
     .titleSection ul button.active {
-        background-color: hsl(3, 71%, 56%);
+        background-color: var(--selected-color);
         color: white;
         border-color: hsl(3, 77%, 44%);
     }
@@ -156,8 +172,8 @@ header {
 
 /*#region Light and Dark Mode Btton*/
 header .theme-toggle {
-    background-color: hsl(225, 23%, 24%);
-    border: 1px solid hsl(225, 23%, 24%);
+    background-color: var(--content-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     width: 40px;
     height: 40px;
@@ -176,7 +192,7 @@ header .theme-toggle img {
 }
 
     header .theme-toggle:hover {
-        background-color: hsl(3, 86%, 64%);
+        background-color: var(--highlight-color);
         border-color: hsl(3, 71%, 56%);
     }
 
@@ -188,10 +204,10 @@ header .theme-toggle img {
 
 /*#region Remove Button*/
 .footer button {
-    background-color: hsl(225, 23%, 24%);
-    border: 1px solid hsl(226, 11%, 37%);
+    background-color: var(--content-color);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    color: white;
+    color: var(--text-color);
     font-family: "Noto Sans HK", sans-serif;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -200,13 +216,13 @@ header .theme-toggle img {
 }
 
     .footer button:hover {
-        background-color: hsl(3, 86%, 64%);
+        background-color: var(--highlight-color);
         border-color: hsl(3, 71%, 56%);
     }
 
     .footer button:active {
-        background-color: hsl(3, 71%, 56%);
-        border-color: hsl(3, 77%, 44%);
+        background-color: var(--background-color);
+        border-color: var(--selected-color);
     }
 /*#endregion*/
 
@@ -233,7 +249,7 @@ header .theme-toggle img {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: hsl(225, 23%, 24%);
+        background-color: var(--background-color);
         border-radius: 25px;
         transition: background-color 0.3s ease;
     }
@@ -253,7 +269,7 @@ header .theme-toggle img {
 
     
     .footer label input:checked + span {
-        background-color: hsl(3, 86%, 64%);
+        background-color: var(--selected-color);
     }
 
         .footer label input:checked + span::before {
