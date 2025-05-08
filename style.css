@@ -309,3 +309,16 @@ header .theme-toggle img {
             transform: translateX(15px);
         }
 /*#endregion*/
+
+@media (max-width: 610px) {
+    .titleSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+        .titleSection ul {
+            justify-content: center;
+            padding-left: 0;
+        }
+}
