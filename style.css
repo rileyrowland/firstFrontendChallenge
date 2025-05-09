@@ -115,6 +115,7 @@ header {
     .titleSection h1 {
         color: var(--text-color);
         font-size: 2em;
+        font-family: Noto-Sans-Bold;
     }
 
     .titleSection ul {
