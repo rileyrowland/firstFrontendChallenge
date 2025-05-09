@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Noto-Sans-Bold";
+    src: url("assets/fonts/static/NotoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noto-Sans";
+    src: url("assets/fonts/static/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noto-Sans-Medium";
+    src: url("assets/fonts/static/NotoSans-Medium.ttf") format("truetype");
+}
+
 :root {
     /*#region General*/
     --body-color: hsl(0, 0%, 93%);
@@ -55,7 +70,7 @@ body {
 
 /*#region Header*/
 .text {
-    font-family: "Noto Sans HK";
+    font-family: Noto-Sans;
 }
 
 .spacer {
@@ -184,7 +199,7 @@ header {
     border: 1px solid var(--border-color);
     border-radius: 20px;
     color: var(--text-color);
-    font-family: "Noto Sans HK", sans-serif;
+    font-family: Noto-Sans;
     padding: 0.5em 1em;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -241,7 +256,7 @@ header .theme-toggle img {
     border: 1px solid var(--border-color);
     border-radius: 20px;
     color: var(--text-color);
-    font-family: "Noto Sans HK", sans-serif;
+    font-family: Noto-Sans;
     padding: 0.5em 1em;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
